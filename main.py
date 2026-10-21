@@ -59,6 +59,10 @@ label_hasil = tk.Label(
 )
 label_hasil.pack(pady=2)
 
+# Fungsi prediksi prodi pilihan
+def prediksi_prodi():
+    label_hasil.config(text="Teknologi Informasi")
+
 # Tombol hasil prediksi
 btn_prediksi = tk.Button(
     root,
@@ -68,7 +72,8 @@ btn_prediksi = tk.Button(
     fg="#253b74",
     padx=15,
     pady=5,
-    relief="raised"
+    relief="raised",
+    command=prediksi_prodi
 )
 btn_prediksi.pack(pady=(10, 20))
 
