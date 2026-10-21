@@ -59,5 +59,18 @@ label_hasil = tk.Label(
 )
 label_hasil.pack(pady=2)
 
+# Tombol hasil prediksi
+btn_prediksi = tk.Button(
+    root,
+    text="Hasil Prediksi",
+    font=("Helvetica", 10, "bold"),
+    bg="white",
+    fg="#253b74",
+    padx=15,
+    pady=5,
+    relief="raised"
+)
+btn_prediksi.pack(pady=(10, 20))
+
 # Menjalankan aplikasi
 root.mainloop()
