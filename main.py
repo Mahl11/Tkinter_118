@@ -49,5 +49,15 @@ label_jurusan_info = tk.Label(
 )
 label_jurusan_info.pack(pady=(15, 3))
 
+# Label luaran hasil prediksi
+label_hasil = tk.Label(
+    root,
+    text="",
+    font=("Helvetica", 12, "bold"),
+    fg="white",
+    bg="#253b74"
+)
+label_hasil.pack(pady=2)
+
 # Menjalankan aplikasi
 root.mainloop()
