@@ -39,5 +39,15 @@ for i in range(1, 11):
     entry.grid(row=i-1, column=1, padx=15, pady=3)
     entries.append(entry)
 
+# Label teks pilihan jurusan
+label_jurusan_info = tk.Label(
+    root,
+    text="Pilihan Jurusan Anda:",
+    font=("Helvetica", 11, "bold"),
+    fg="white",
+    bg="#253b74"
+)
+label_jurusan_info.pack(pady=(15, 3))
+
 # Menjalankan aplikasi
 root.mainloop()
