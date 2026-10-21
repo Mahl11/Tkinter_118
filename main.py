@@ -1,6 +1,7 @@
 import tkinter as tk
+from tkinter import messagebox
 
-# Inisialisasi jendela utama
+# Inisialisasi jendela utama aplikasi
 root = tk.Tk()
 root.title("Aplikasi Prediksi Prodi Pilihan")
 root.geometry("450x620")
@@ -21,7 +22,7 @@ label_judul.pack(pady=(25, 15))
 frame_input = tk.Frame(root, bg="#253b74")
 frame_input.pack(pady=5)
 
-# List untuk menampung widget input nilai mata pelajaran
+# List untuk menampung widget Entry nilai mata pelajaran
 entries = []
 
 for i in range(1, 11):
@@ -49,7 +50,7 @@ label_jurusan_info = tk.Label(
 )
 label_jurusan_info.pack(pady=(15, 3))
 
-# Label luaran hasil prediksi
+# Label luaran hasil prediksi prodi
 label_hasil = tk.Label(
     root,
     text="",
@@ -59,8 +60,23 @@ label_hasil = tk.Label(
 )
 label_hasil.pack(pady=2)
 
-# Fungsi prediksi prodi pilihan
+# Fungsi prediksi prodi pilihan dengan validasi nilai
 def prediksi_prodi():
+    for i, entry in enumerate(entries, start=1):
+        nilai = entry.get().strip()
+        if not nilai:
+            messagebox.showwarning("Peringatan", f"Nilai Mata Pelajaran {i} belum diisi!")
+            return
+        try:
+            val = float(nilai)
+            if val < 0 or val > 100:
+                messagebox.showwarning("Peringatan", f"Nilai Mata Pelajaran {i} harus berada di antara 0 - 100!")
+                return
+        except ValueError:
+            messagebox.showwarning("Peringatan", f"Nilai Mata Pelajaran {i} harus berupa angka!")
+            return
+            
+    # Menampilkan hasil prodi pilihan sesuai ketentuan praktikum
     label_hasil.config(text="Teknologi Informasi")
 
 # Tombol hasil prediksi
@@ -77,5 +93,5 @@ btn_prediksi = tk.Button(
 )
 btn_prediksi.pack(pady=(10, 20))
 
-# Menjalankan aplikasi
+# Menjalankan event loop utama aplikasi
 root.mainloop()
