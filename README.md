@@ -15,3 +15,5 @@ Membuat aplikasi GUI berbasis Tkinter untuk memprediksi Program Studi pilihan be
 2. **10 Input Nilai**: Form input mata pelajaran 1 sampai 10.
 3. **1 Button Prediksi**: Tombol bertuliskan "Hasil Prediksi".
 4. **1 Label Luaran**: Menampilkan hasil prediksi prodi ("Teknologi Informasi").
+
+<img width="584" height="720" alt="image" src="https://github.com/user-attachments/assets/7b103dbf-31d5-41bc-a356-0edcb2512a84" />
