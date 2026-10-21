@@ -20,7 +20,7 @@ label_judul.pack(pady=(25, 20))
 frame_input = tk.Frame(root, bg="#253b74")
 frame_input.pack(pady=5)
 
-# Input Nilai Mata Pelajaran 1 sampai 5
+# Input Nilai Mata Pelajaran 1 sampai 8
 label_mp1 = tk.Label(frame_input, text="Nilai Mata Pelajaran 1:", font=("Helvetica", 10), fg="white", bg="#253b74")
 label_mp1.grid(row=0, column=0, padx=10, pady=4, sticky="w")
 entry_mp1 = tk.Entry(frame_input, width=20)
@@ -45,6 +45,21 @@ label_mp5 = tk.Label(frame_input, text="Nilai Mata Pelajaran 5:", font=("Helveti
 label_mp5.grid(row=4, column=0, padx=10, pady=4, sticky="w")
 entry_mp5 = tk.Entry(frame_input, width=20)
 entry_mp5.grid(row=4, column=1, padx=10, pady=4)
+
+label_mp6 = tk.Label(frame_input, text="Nilai Mata Pelajaran 6:", font=("Helvetica", 10), fg="white", bg="#253b74")
+label_mp6.grid(row=5, column=0, padx=10, pady=4, sticky="w")
+entry_mp6 = tk.Entry(frame_input, width=20)
+entry_mp6.grid(row=5, column=1, padx=10, pady=4)
+
+label_mp7 = tk.Label(frame_input, text="Nilai Mata Pelajaran 7:", font=("Helvetica", 10), fg="white", bg="#253b74")
+label_mp7.grid(row=6, column=0, padx=10, pady=4, sticky="w")
+entry_mp7 = tk.Entry(frame_input, width=20)
+entry_mp7.grid(row=6, column=1, padx=10, pady=4)
+
+label_mp8 = tk.Label(frame_input, text="Nilai Mata Pelajaran 8:", font=("Helvetica", 10), fg="white", bg="#253b74")
+label_mp8.grid(row=7, column=0, padx=10, pady=4, sticky="w")
+entry_mp8 = tk.Entry(frame_input, width=20)
+entry_mp8.grid(row=7, column=1, padx=10, pady=4)
 
 # Menjalankan aplikasi
 root.mainloop()
